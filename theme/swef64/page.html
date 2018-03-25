@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>{%pagetitle%} - {%comictitle%}</title>
+		<meta http-equiv="Content-Type" content="txt/html; charset=utf-8" />
+
+		<style type="text/css">
+			body {
+				/*background-image:url("{%pr%}swef.png");*/
+				background:#fff;
+				font-size:21px;
+				font-family: helvetica, arial, monospace;
+			}
+			.griddu {
+				display: grid;
+				grid-template-columns:100px auto 100px;
+				grid-template-rows:auto auto auto;
+			}
+			.logo {
+				grid-column-start:1;
+				grid-column-end:4;
+				grid-row-start:1;
+				grid-row-end:2;
+			}
+			.next {
+				grid-column-start:3;
+				grid-column-end:4;
+				grid-row-start:2;
+				grid-row-end:3;
+				position: relative;
+			}
+			.previous {
+				grid-column-start:1;
+				grid-column-end:2;
+				grid-row-start:2;
+				grid-row-end:3;
+				position: relative;
+			}
+			.page {
+				grid-column-start:2;
+				grid-column-end:3;
+				grid-row-start:2;
+				grid-row-end:3;
+			}
+			.text {
+				grid-column-start:2;
+				grid-column-end:3;
+				grid-row-start:3;
+				grid-row-end:4;
+			}
+
+			.logo {
+				text-align: center;
+			}
+			.logo img {
+				margin:0 auto;
+			}
+			.page img {
+				width:100%;
+			}
+			.previous a:nth-child(2), .next a:nth-child(2) {
+				position:absolute;
+				bottom:0;
+				left:0;
+			}
+
+			.text {
+				padding:20px;
+				background-color:#fff;
+				color:#000;
+				border:4px dashed #000;
+				margin-top:10px;
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		<div class="griddu">
+			<div class="logo"><img src="{%pr%}logo.png" />
+			</div>
+
+			<div class="text">
+				{%description%}
+			</div>
+
+			<div class="page"><img src="{%image%}" />
+			</div>
+
+			<div class="previous">{%%previous
+				<a href="{%previous%}"><img src="{%pr%}prev.png" /></a>
+				<a href="{%previous%}"><img src="{%pr%}prev.png" /></a>
+			previous%%}</div>
+
+			<div class="next">{%%next
+				<a href="{%next%}"><img src="{%pr%}next.png" /></a>
+				<a href="{%next%}"><img src="{%pr%}next.png" /></a>
+			next%%}</div>
+		</div>
+	</body>
+</html>

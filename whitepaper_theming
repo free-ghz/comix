@@ -1,0 +1,15 @@
+page.html	for a comic page
+map.html	for a map of all pages
+
+style.css	style if separate
+
+{%variable%}
+	page
+		comitcitle - comic title
+		pagetitle - page title
+		image - page image url
+		previous - previous page url
+		next - next page url
+		description - description
+		{%%next ... next%%} - navigation area
+		{%%previous ... previous%%} - navigation area

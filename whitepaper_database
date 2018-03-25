@@ -1,0 +1,28 @@
+ok men detta är mina två smarta revelations år 2018
+	- spara sidor som en double linked list
+		- dvs ha inte en order utan en next= och en prev=
+	- chapters är bara en tag så reordering borde vara simple a.f. även mellan kapitel
+
+	this.prev.next = this.next
+	this.next.prev = this.prev
+
+pages:
+	serial - för sql purposes
+	url - url till var bilden är
+	thumb - url till en thumbnail
+	hash - hur man länkar!
+	next - hash till nästa
+	prev - hash till föregående
+	title - titel för sidan
+	description - text om det ska va en sån
+	chapter - id för ett kapitel
+
+chapters:
+	serial - för page-länkning
+	title - ett namn
+	description - beskrivning
+
+settings:
+	serial - för att jag vill
+	key
+	value
